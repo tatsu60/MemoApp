@@ -7,27 +7,27 @@ class  MemoList extends React.Component {
 
       <View style={styles.memoList}>
           <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモのタイトル</Text>
+            <Text style={styles.memoTitle}>自己分析</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
 
           <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモのタイトル</Text>
+            <Text style={styles.memoTitle}>求人検索とピックアップ</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
 
           <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモのタイトル</Text>
+            <Text style={styles.memoTitle}>比較検討</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
 
           <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモのタイトル</Text>
+            <Text style={styles.memoTitle}>応募書類作成</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
 
           <View style={styles.memoListItem}>
-            <Text style={styles.memoTitle}>メモのタイトル</Text>
+            <Text style={styles.memoTitle}>面接対策</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
       </View>

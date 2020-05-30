@@ -6,7 +6,7 @@ class Appbar extends React.Component {
     return (
       <View style={styles.appbar}>
         <View>
-          <Text style={styles.appbarTitle}>MEMOT</Text>
+          <Text style={styles.appbarTitle}>転職やることリスト</Text>
         </View>
       </View>
     );
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0, },
     shadowOpacity: 0.5,
     shadowRadius: 10,
+    elevation: 5,
     zIndex: 10,
   },
   appbarTitle: {
