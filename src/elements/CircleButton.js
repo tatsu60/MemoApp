@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native' ;
+import { StyleSheet, View, TouchableHighlight } from 'react-native';
 import * as Font from 'expo-font';
 import { createIconSet } from '@expo/vector-icons';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
@@ -26,40 +26,46 @@ class CircleButton extends React.Component {
 
 
   render() {
-    const { name, style, color } = this.props;
+    const { name, style, color, onPress } = this.props;
 
     let bgColor = '#d6097b';
     let textColor = '#fff';
 
     if (color === 'white') {
       bgColor = '#fff';
-      textColor = '#d6097b'
+      textColor = '#d6097b';
     }
 
     return (
-      <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
-        {
-          this.state.fontLoaded ? (
-            <CustomIcon name={name} style={[styles.circleButtonTitle, { color: textColor}]} />
-          ) :null
-        }
-      </View>
+      <TouchableHighlight style={[styles.container, style]} onPress={onPress} underlayColor="transparent">
+        <View style={[styles.circleButton, { backgroundColor: bgColor }]}>
+          {
+            this.state.fontLoaded ? (
+              <CustomIcon name={name} style={[styles.circleButtonTitle, { color: textColor }]} />
+            ) : null
+          }
+        </View>
+      </TouchableHighlight>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  circleButton: {
+  container: {
+    width: 48,
+    height: 48,
     position: 'absolute',
     bottom: 32,
     right: 32,
+  },
+  circleButton: {
     width: 60,
     height: 60,
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 0, },
+    shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.5,
     shadowRadius: 10,
     elevation: 5,

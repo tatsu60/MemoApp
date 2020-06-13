@@ -1,35 +1,45 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
-class  MemoList extends React.Component {
+class MemoList extends React.Component {
   render() {
     return (
 
       <View style={styles.memoList}>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('MemoDetail'); }}>
           <View style={styles.memoListItem}>
             <Text style={styles.memoTitle}>自己分析</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
+        </TouchableHighlight>
 
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('MemoDetail'); }}>
           <View style={styles.memoListItem}>
             <Text style={styles.memoTitle}>求人検索とピックアップ</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
+        </TouchableHighlight>
 
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('MemoDetail'); }}>
           <View style={styles.memoListItem}>
             <Text style={styles.memoTitle}>比較検討</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
+        </TouchableHighlight>
 
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('MemoDetail'); }}>
           <View style={styles.memoListItem}>
             <Text style={styles.memoTitle}>応募書類作成</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
+        </TouchableHighlight>
 
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('MemoDetail'); }}>
           <View style={styles.memoListItem}>
             <Text style={styles.memoTitle}>面接対策</Text>
             <Text style={styles.memoDate}>2020/05/10</Text>
           </View>
+        </TouchableHighlight>
       </View>
 
     );
@@ -37,7 +47,7 @@ class  MemoList extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  memoList:{
+  memoList: {
     width: '100%',
     flex: 1,
   },
