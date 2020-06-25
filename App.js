@@ -29,9 +29,11 @@ if (!firebase.apps.length) {
 const App = createStackNavigator({
   Login:      { screen: LoginScreen },
   Signup:     { screen: SignupScreen },
+  MemoEdit:   { screen: MemoEditScreen },
+
   Home:       { screen: MemoListScreen },
   MemoDetail: { screen: MemoDetailScreen },
-  MemoEdit:   { screen: MemoEditScreen },
+
 }, {
   defaultNavigationOptions: {
     headerTitle: '転職やることリスト',

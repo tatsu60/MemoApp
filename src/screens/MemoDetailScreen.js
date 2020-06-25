@@ -9,14 +9,14 @@ class MemoDetailScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.memoHeader}>
           <View>
-            <Text style={styles.memoHeaderTitle}>講座のアイデア</Text>
+            <Text style={styles.memoHeaderTitle}>求人検索とお気に入り保存</Text>
             <Text style={styles.memoHeaderDate}>2020/05/30</Text>
           </View>
         </View>
 
         <View style={styles.memoContent}>
           <Text>
-            講座のアイデアです。
+            パーソルキャリアが気になる。
           </Text>
         </View>
         <CircleButton name="pencil" color='white' style={styles.editButton} onPress={() => { this.props.navigation.navigate('MemoEdit'); }} />
