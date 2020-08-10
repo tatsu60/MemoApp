@@ -19,12 +19,15 @@ class MemoDetailScreen extends React.Component {
     this.setState({ memo: params.memo });
   }
 
+  returnMemo(memo) {
+    this.setState({ memo });
+  }
 
   render() {
     const { memo } = this.state;
 
     // componentDidMountだとrender()が先に呼ばれるので、stateを利用しているコンポーネントのデータの存在チェック
-    if (memo == null) { return null; }
+    /* if (memo == null) { return null; } */
 
     return (
       <View style={styles.container}>
@@ -40,7 +43,7 @@ class MemoDetailScreen extends React.Component {
             {memo.body}
           </Text>
         </View>
-        <CircleButton name="pencil" color='white' style={styles.editButton} onPress={() => { this.props.navigation.navigate('MemoEdit', { memo }); }} />
+        <CircleButton name="pencil" color='white' style={styles.editButton} onPress={() => { this.props.navigation.navigate('MemoEdit', { memo, returnMemo: this.returnMemo.bind(this) }); }} />
       </View>
     );
   }
