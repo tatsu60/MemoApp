@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   memoContent: {
     paddingTop: 30,
     paddingLeft: 20,
-    paddingLeft: 20,
+    paddingRight: 20,
     paddingBottom: 20,
     backgroundColor: '#fff',
     flex: 1,

@@ -16,11 +16,10 @@ class MemoCreateScreen extends React.Component {
       body: this.state.body,
       createOn: new Date(),
     })
-      .then((docRef) => {
-        console.log(docRef.id);
+      .then(() => {
+        this.props.navigation.goBack();
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
       });
   }
 
@@ -30,6 +29,8 @@ class MemoCreateScreen extends React.Component {
         <TextInput
           style={styles.memoEditInput}
           multiline
+          autoFocus = {true}
+          placeholder = 'やることを入力してください。'
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
         />
@@ -43,10 +44,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
+    backgroundColor: '#fff',
   },
   memoEditInput: {
     backgroundColor: '#fff',
-    flex: 1,
     paddingTop: 32,
     paddingLeft: 16,
     paddingRight: 16,
