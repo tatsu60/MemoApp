@@ -14,7 +14,7 @@ class MemoDetailScreen extends React.Component {
     memo: {},
   }
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     const { params } = this.props.navigation.state;
     this.setState({ memo: params.memo });
   }
@@ -27,13 +27,13 @@ class MemoDetailScreen extends React.Component {
     const { memo } = this.state;
 
     // componentDidMountだとrender()が先に呼ばれるので、stateを利用しているコンポーネントのデータの存在チェック
-    /* if (memo == null) { return null; } */
+    if (memo == null) { return null; }
 
     return (
       <View style={styles.container}>
         <View style={styles.memoHeader}>
           <View>
-            <Text style={styles.memoHeaderTitle}>{memo.body.substring(0, 10)}</Text>
+            <Text style={styles.memoHeaderTitle}>{memo.body ? memo.body.substring(0, 10) : '' }</Text>
             <Text style={styles.memoHeaderDate}>{dateString(memo.createOn)}</Text>
           </View>
         </View>
