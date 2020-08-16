@@ -50,6 +50,7 @@ class MemoEditScreen extends React.Component {
           multiline
           autoFocus = {true}
           placeholder = 'やることを入力してください。'
+          textAlignVertical="top"
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
         />
@@ -64,10 +65,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#fff',
   },
   memoEditInput: {
     backgroundColor: '#fff',
+    flex: 1,
     paddingTop: 32,
     paddingLeft: 16,
     paddingRight: 16,

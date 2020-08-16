@@ -33,6 +33,7 @@ class MemoCreateScreen extends React.Component {
           placeholder = 'やることを入力してください。'
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
+          textAlignVertical="top"
         />
         <CircleButton name="check" onPress={this.handlePress.bind(this)} />
       </View>
@@ -44,10 +45,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#fff',
   },
   memoEditInput: {
     backgroundColor: '#fff',
+    flex: 1,
     paddingTop: 32,
     paddingLeft: 16,
     paddingRight: 16,

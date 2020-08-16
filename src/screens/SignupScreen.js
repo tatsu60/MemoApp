@@ -47,7 +47,7 @@ class SignupScreen extends React.Component {
           placeholder="Password"
           secureTextEntry
         />
-        <TouchableHighlight style={styles.button} onPress={this.handleSubmit.bind(this)} underlayColor='#C70F66'>
+        <TouchableHighlight style={styles.button} onPress={this.handleSubmit.bind(this)} underlayColor="#C70F66">
           <Text style={styles.buttonTitle}>送信する</Text>
         </TouchableHighlight>
       </View>
